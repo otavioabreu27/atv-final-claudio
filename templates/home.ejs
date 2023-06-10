@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container">
+        <a href="/salario">
+            <button>Editar salário minimo</button>
+        </a>
+        <a href="/funcionario">
+            <button>Adicionar funcionario</button>
+        </a>
+    </div>
+    <div>
+        <h4>
+            Salario minimo atual: <%= salario   %>
+        </h4>
+        <table>
+            <% if (funcionarios.length) { %>
+            <tr>
+                <th>Código</th>
+                <th>Horas Trabalhadas</th>
+                <th>Valor da hora</th>
+                <th>Salário inicial</th>
+                <th>Auxilio alimentação</th>
+                <th>Salário Final</th>
+            </tr>
+            <% funcionarios.forEach((funcionario) => { %>
+            <tr>    
+                <td><%= funcionario.codFunc %></td>
+                <td><%= funcionario.horasTrabalhadas %></td>
+                <td><%= funcionario.valorHora %></td>
+                <td><%= funcionario.salarioInicial %></td>
+                <td><%= funcionario.alimentacao %></td>
+                <td><%= funcionario.salarioInicial + funcionario.alimentacao %></td>
+            </tr>
+            <% }) %> 
+            <% } else { %>
+                <span>Nenhum funcionario encontrado</span>
+            <% } %>
+        </table>
+    </div>
+</body>
+</html>

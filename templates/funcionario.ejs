@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionario</title>
+</head>
+<body>
+    <h4>Cadastro de Funcionario</h4>
+
+    <form action="/funcionario" method="POST">
+        <div>
+        <label for="codigo">Codigo:</label>
+        <input type="text" id="codigo" name="codigo">
+        </div>
+        <div>
+        <label for="numHoras">Horas trabalhadas:</label>
+        <input type="text" id="numHoras" name="numHoras">
+        </div>
+        <div>
+            <label for="turno">Turno:</label>
+            <select id="turno" name="turno">
+                <option value="M">Matutino</option>
+                <option value="V">Vespertino</option>
+                <option value="N">Noturno</option>
+            </select> 
+        </div>
+        <div>
+            <label for="categoria">Categoria:</label>
+            <select id="categoria" name="categoria">
+                <option value="G">Gerente</option>
+                <option value="F">Funcionário</option>
+            </select> 
+        </div>
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>
